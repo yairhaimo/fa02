@@ -14,16 +14,18 @@
 
 </head>
 <body>
+<a ui-sref="details">BEEP</a>
+    <fa-app style="height: 568px; width: 320px; margin: 0;">
 
-<div>
-    <fa-app ng-controller="TestController" style="width: 320px; height: 568px; overflow: hidden;">
+    	<div ui-view fa-animate-leave="Page.pageLeave($done)" fa-animate-enter="Page.pageEnter($done)"></div>
+
 
         <!--<fa-modifier fa-translate="[100, 100, 2]">-->
         <!--<fa-surface>-->
         <!--{{msg}}-->
         <!--</fa-surface>-->
         <!--</fa-modifier>-->
-
+<!-- 
         <fa-modifier ng-repeat="item in items"
                      fa-animate-enter="enter(item, $done)"
                      fa-animate-leave="leave(item, $done)"
@@ -39,9 +41,8 @@
 
         <fa-surface>
             <button ng-click="items.splice(0,1)">DELETE</button>
-        </fa-surface>
+        </fa-surface> -->
     </fa-app>
-</div>
 
 <!-- <fa-app style="height: 568px; width: 320px; margin: 0;">
   <fa-view fa-pipe-from="evt" fa-click="flip()">
@@ -64,6 +65,7 @@
 
 <script src="app/app.js"></script>
 <script src="app/pages/home/ctrl.home.js"></script>
+<script src="app/pages/details/ctrl.details.js"></script>
 
 </body>
 </html>
